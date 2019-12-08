@@ -15,7 +15,10 @@ class Deck {
     
     for (var suit in suits){
       for(var rank in ranks){
-        var card = new Card(rank, suit);
+        var card = new Card(
+          rank: rank, 
+          suit: suit
+        );
         cards.add(card);
       }
     }
@@ -52,7 +55,7 @@ class Card {
   String suit;
   String rank;
   
-  Card(this.rank, this.suit);
+  Card({this.rank, this.suit});
   
   toString(){
     return '$rank of $suit';
